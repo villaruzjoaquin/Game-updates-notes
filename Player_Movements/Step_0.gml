@@ -12,7 +12,6 @@ hsp = hsp + (right - left) * walk_spd;
 
 //drag
 hsp = lerp(hsp, 0, drag);
-
 //stop
 if abs(hsp) <= 0.1 hsp = 0;
 
@@ -28,4 +27,10 @@ y += vsp;
 
 
 //apply animation
-image_xscale = facing;
+if hsp != 0
+{
+	image_xscale = facing;
+	sprite_index = sKnightWalk;
+} else {
+	sprite_index = sKnightIdle;
+}
