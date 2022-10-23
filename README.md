@@ -3,3 +3,6 @@
 
 ### Introduction
 > Refer to Player_Movements Folder.
+
+### Finite State Machines
+> Refer to Finite_State_machines Folder.
