@@ -8,6 +8,7 @@ var up = keyboard_check(vk_up);
 var down = keyboard_check(vk_down);
 
 var swing = mouse_check_button(mb_left);
+var airAttack = keyboard_check(vk_up) and keyboard_check(mb_left);
 
 //calculate movements
 hsp = hsp + (right - left) * walk_spd;
@@ -39,6 +40,14 @@ if hsp != 0
 
 if(swing){
 	sprite_index = sKnightAttack;
+} else {
+	sprite_index = sKnightIdle;
+}
+
+if(airAttack){
+	sprite_index = sKnightAirAttack;
+} else {
+	sprite_index = sKnightIdle;
 }
 
 
