@@ -7,6 +7,8 @@ var right = keyboard_check(vk_right);
 var up = keyboard_check(vk_up);
 var down = keyboard_check(vk_down);
 
+
+// declare swing attack variables
 var swing = mouse_check_button(mb_left);
 var airAttack = keyboard_check(vk_up) and keyboard_check(mb_left);
 
@@ -38,12 +40,14 @@ if hsp != 0
 	sprite_index = sKnightIdle;
 }
 
+// allow player to swing
 if(swing){
 	sprite_index = sKnightAttack;
 } else {
 	sprite_index = sKnightIdle;
 }
 
+// allow player to attack Air (a bit inconsistent but it'll do)
 if(airAttack){
 	sprite_index = sKnightAirAttack;
 } else {
