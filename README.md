@@ -6,3 +6,6 @@
 
 ### Finite State Machines
 > Refer to Finite_State_machines Folder.
+
+### Collisions
+> Refer to Collisions Folder.
